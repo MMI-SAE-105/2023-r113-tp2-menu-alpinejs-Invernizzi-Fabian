@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
-    <button><a href="../index.html">Accueil</a></button>
-    <h1>Les chats</h1>
-</head>
+<html lang="fr" x-data="{menuIsOpen : false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les chats</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>
+      .menu {
+        position: fixed; /*reste en place lors du défilement*/
+        top : 0; /*fixe le menu en haut de la page*/
+        left : 0;
+        width: 100vw; /*largeur de la fenêtre*/
+        height: 100vh; /*hauteur de la fenêtre*/
+        background: #fff; /*couleur de fond*/
+        display : grid; /*grille (pour centrer)*/
+        place-content: center; /*aligmement au centre (V et H) */
+      }
+      .header_menuBtn {
+        position: relative; /*pour appliquer z-index*/
+        z-index: 10; /*pour que le bouton soit au dessus du menu*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Test de menu} -->
+    <header>
+      <button 
+        aria-controls="mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+      >
+        <img src="../public/icones/UisBars.svg" alt="menu burger">
+      </button>
+      
+      <nav 
+        id="mainNav" 
+        x-show="menuIsOpen" 
+        x-transition.duration.800ms.origin.top
+        class="menu"
+      >
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../cats/index.html">Les Chats</a></li>
+          <li><a href="../dogs/index.html">Les Chiens</a></li>
+          
+        </ul>
+
+      </nav>
+
+      <h1>Les chats</h1>
+
+    </header>
 <body>
+    <p>Chaque race de chat a ses propres caractéristiques distinctives, des pelages luxuriants aux yeux énigmatiques. Découvrez ci dessous ce qui rend chaque race spéciale si spécial ! </p>
     <ul>
-        <li><a href="../cats/chat-1.html">Premier Chat</a></li>
+        <li><a href="../cats/chat-1.html">Ragdoll</a></li>
         <li><a href="../cats/chat-2.html">Deuxième Chat</a></li>
     </ul>
 </body>
