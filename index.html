@@ -32,14 +32,13 @@
         @click="menuIsOpen = ! menuIsOpen"
         class="header_menuBtn"
       >
-        menu
+        <img src="public/icones/UisBars.svg" alt="menu burger">
       </button>
       <h1>Test de menu</h1>
       <nav 
         id="mainNav" 
         x-show="menuIsOpen" 
-        x-transition.duration.800ms
-        class="menu"
+        x-transition.duration.800ms.origin.top
       >
         <ul>
           <li><a href="/cats/index.html">Les Chats</a></li>
