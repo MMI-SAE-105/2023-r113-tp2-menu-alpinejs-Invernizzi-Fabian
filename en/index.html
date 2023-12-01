@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen : false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Four-Legged Friends</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <style>
+      .menu {
+        position: fixed; /*reste en place lors du défilement*/
+        top : 0; /*fixe le menu en haut de la page*/
+        left : 0;
+        width: 100vw; /*largeur de la fenêtre*/
+        height: 100vh; /*hauteur de la fenêtre*/
+        background: #fff; /*couleur de fond*/
+        display : grid; /*grille (pour centrer)*/
+        place-content: center; /*aligmement au centre (V et H) */
+      }
+      .header_menuBtn {
+        position: relative; /*pour appliquer z-index*/
+        z-index: 10; /*pour que le bouton soit au dessus du menu*/
+      }
+      
+      .animaux {
+        height: 300px;
+        width: auto;
+      }
+      .lien_menu{
+        font-size: 40px;
+        line-height: 200%;
+      }
+      h1,h2,p,.lien_menu {
+        font-family:"montserrat", sans-serif;
+      }
+      p{
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Test de menu} -->
+    <header>
+      <button 
+        aria-controls="mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+      >
+        <img src="/public/icones/UisBars.svg" alt="menu burger">
+      </button>
+      <h1>Welcome to “Four-Legged Friends”</h1>
+      <nav 
+        id="mainNav" 
+        x-show="menuIsOpen" 
+        x-transition.duration.800ms.origin.top
+        class="menu"
+      >
+        <ul>
+          <li><a href="/fr/index.html" class="lien_menu">Home</a></li>
+          <li><a href="/fr/cats/index.html" class="lien_menu">Cats</a></li>
+          <li><a href="/fr/dogs/index.html" class="lien_menu">Dogs</a></li>
+        </ul>
+
+      </nav>
+    </header>
+    <!-- h2>lorem2^p>lorem -->
+    <img src="/public/img/chien&chat.jpg" alt="Chien&chat" class="animaux">
+    <h2>Discover our Sections:</h2>
+    <p>
+      <u>About Cats</u>
+    </p>
+    <p>
+      At our place, we highlight the beauty and diversity of cat breeds, each bringing their own grace, charm and unique personality. Whether you're a long-time enthusiast or a future owner, explore our breed guide to learn more about these fascinating felines.    </p>
+    <a href="/fr/cats/index.html">Read the content</a>
+    <pre>
+      
+    </pre>
+    <p>
+      <u>The World of Dogs</u>
+    </p>
+    <p>
+      In this section dedicated to dog breeds, we invite you to explore a world where each muzzle, each coat, and each look express a unique story. Whether you are an experienced amateur or are discovering the world of dog breeds, our site offers you an in-depth dive into the diversity and richness of these extraordinary companions.    </p>
+    <a href="/fr/dogs/index.html">Read the content</a>
+  </body>
+</html>
