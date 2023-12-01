@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bouvier bernois</title>
+    <title>Les chats</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <style>
       .menu {
@@ -20,11 +20,6 @@
       .header_menuBtn {
         position: relative; /*pour appliquer z-index*/
         z-index: 10; /*pour que le bouton soit au dessus du menu*/
-      }
-  
-      .animaux {
-        height: 500px;
-        width: auto;
       }
       h1,h2,p,.lien_menu {
       font-family:"montserrat", sans-serif;
@@ -47,7 +42,7 @@
         @click="menuIsOpen = ! menuIsOpen"
         class="header_menuBtn"
       >
-        <img src="../public/icones/UisBars.svg" alt="menu burger">
+        <img src="/public/icones/UisBars.svg" alt="menu burger">
       </button>
       
       <nav 
@@ -56,16 +51,22 @@
         x-transition.duration.800ms.origin.top
         class="menu"
       >
-        <ul>
-          <li><a href="../index.html" class="lien_menu">Accueil</a></li>
-          <li><a href="../cats/index.html" class="lien_menu">Les Chats</a></li>
-          <li><a href="../dogs/index.html" class="lien_menu">Les Chiens</a></li>
-          
-        </ul>
+      <ul>
+        <li><a href="/fr/index.html" class="lien_menu">Accueil</a></li>
+        <li><a href="/fr/cats/index.html" class="lien_menu">Les Chats</a></li>
+        <li><a href="/fr/dogs/index.html" class="lien_menu">Les Chiens</a></li>
+      </ul>
+
       </nav>
-      <h1>Bouvier Bernois</h1>
+
+      <h1>Les chats</h1>
+
     </header>
 <body>
-    <img src="../public/img/dogs/chien_1.jpg" alt="Bouvier_bernois" class="animaux">
+    <p>Chaque race de chat a ses propres caractéristiques distinctives, des pelages luxuriants aux yeux énigmatiques. Découvrez ci dessous ce qui rend chaque race spéciale si spécial ! </p>
+    <ul>
+        <li><a href="/fr/cats/chat-1.html">Ragdoll</a></li>
+        <li><a href="/fr/cats/chat-2.html">American Curl</a></li>
+    </ul>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>American Curl</title>
+    <title>Ragdoll</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <style>
       .menu {
@@ -21,11 +21,11 @@
         position: relative; /*pour appliquer z-index*/
         z-index: 10; /*pour que le bouton soit au dessus du menu*/
       }
-      
       .animaux {
         height: 500px;
         width: auto;
       }
+     
       h1,h2,p,.lien_menu {
       font-family:"montserrat", sans-serif;
       }
@@ -47,7 +47,7 @@
         @click="menuIsOpen = ! menuIsOpen"
         class="header_menuBtn"
       >
-        <img src="../public/icones/UisBars.svg" alt="menu burger">
+        <img src="/public/icones/UisBars.svg" alt="menu burger">
       </button>
       
       <nav 
@@ -56,16 +56,16 @@
         x-transition.duration.800ms.origin.top
         class="menu"
       >
-        <ul>
-          <li><a href="../index.html" class="lien_menu">Accueil</a></li>
-          <li><a href="../cats/index.html" class="lien_menu">Les Chats</a></li>
-          <li><a href="../dogs/index.html" class="lien_menu">Les Chiens</a></li>
-          
-        </ul>
+      <ul>
+        <li><a href="/fr/index.html" class="lien_menu">Accueil</a></li>
+        <li><a href="/fr/cats/index.html" class="lien_menu">Les Chats</a></li>
+        <li><a href="/fr/dogs/index.html" class="lien_menu">Les Chiens</a></li>
+      </ul>
+
       </nav>
-      <h1>American Curl</h1>
+      <h1>Ragdoll</h1>
     </header>
 <body>
-    <img src="../public/img/cats/chat_2.jpg" alt="American_Curl" class="animaux">
+    <img src="/public/img/cats/chat_1.webp" alt="Ragdoll" class="animaux">
 </body>
 </html>

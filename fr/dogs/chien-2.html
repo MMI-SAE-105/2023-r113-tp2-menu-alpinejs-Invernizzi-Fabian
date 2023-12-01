@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Les chiens</title>
+    <title>Labrador Retriever</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <style>
       .menu {
@@ -20,6 +20,11 @@
       .header_menuBtn {
         position: relative; /*pour appliquer z-index*/
         z-index: 10; /*pour que le bouton soit au dessus du menu*/
+      }
+      
+      .animaux {
+        height: 500px;
+        width: auto;
       }
       h1,h2,p,.lien_menu {
       font-family:"montserrat", sans-serif;
@@ -42,7 +47,7 @@
         @click="menuIsOpen = ! menuIsOpen"
         class="header_menuBtn"
       >
-        <img src="../public/icones/UisBars.svg" alt="menu burger">
+        <img src="/public/icones/UisBars.svg" alt="menu burger">
       </button>
       
       <nav 
@@ -51,26 +56,16 @@
         x-transition.duration.800ms.origin.top
         class="menu"
       >
-        <ul>
-          <li><a href="../index.html" class="lien_menu">Accueil</a></li>
-          <li><a href="../cats/index.html" class="lien_menu">Les Chats</a></li>
-          <li><a href="../dogs/index.html" class="lien_menu">Les Chiens</a></li>
-          
-        </ul>
+      <ul>
+        <li><a href="/fr/index.html" class="lien_menu">Accueil</a></li>
+        <li><a href="/fr/cats/index.html" class="lien_menu">Les Chats</a></li>
+        <li><a href="/fr/dogs/index.html" class="lien_menu">Les Chiens</a></li>
+      </ul>
+
       </nav>
-
-      <h1>Les chiens</h1>
-      
+      <h1>Labrador Retriever</h1>
     </header>
-
-    
-</head>
-
 <body>
-    <p>Plongez dans le monde fascinant des races de chiens, chacune apportant sa propre énergie, son caractère et ses besoins spécifiques. Que vous soyez attiré par les races populaires ou que vous découvriez des perles moins connues, nous vous aidons à mieux comprendre ce qui rend chaque chien unique.</p>
-    <ul>
-        <li><a href="../dogs/chien-1.html">Bouvier bernois</a></li>
-        <li><a href="../dogs/chien-2.html">Labrador Retriever</a></li>
-    </ul>
+    <img src="/public/img/dogs/chien_2.webp" alt="Labrador_Retriever" class="animaux">
 </body>
 </html>
